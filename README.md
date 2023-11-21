@@ -34,6 +34,10 @@ Es un campo clave de la Inteligencia Artificial que implica redes neuronales con
 2. Abrir la terminal y ejecutar el siguiente comando para instalar los paquetes necesarios (pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt)
 3. Una vez termine la instalacion hacer correr el archivo main.py
 
+## Link con la carpeta que contiene todo el proyecto
+
+(https://drive.google.com/drive/folders/1jZxF4eE74SqF_BjCQFMlO2zExqZHPDBk?usp=sharing)
+
 ## Links usados para este proyecto
 
 YOLOv5 (https://github.com/ultralytics/yolov5). 
