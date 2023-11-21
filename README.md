@@ -28,6 +28,12 @@ Es un campo clave de la Inteligencia Artificial que implica redes neuronales con
 3. Inferencia
    Poner en practica lo que nuestra red neuronal aprendio luego del entrenamiento, para este proyecto se hara en tiempo real.
 
+## Cómo ejecutar el programa en PyCharm
+
+1. Tener instaldo Python version 9 o 10
+2. Abrir la terminal y ejecutar el siguiente comando para instalar los paquetes necesarios (pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt)
+3. Una vez termine la instalacion hacer correr el archivo main.py
+
 ## Links usados para este proyecto
 
 YOLOv5 (https://github.com/ultralytics/yolov5). 
