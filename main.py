@@ -1,16 +1,32 @@
-# This is a sample Python script.
+import torch
+import cv2
+import numpy as np
+import pandas
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Leer el modelo
+model = torch.hub.load('ultralytics/yolov5','custom',
+                       path = 'C:/Users/HP/PycharmProjects/TopicosSelectosEnIAPrimerParcial/autos.pt')
 
+cap = cv2.VideoCapture(0)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+while True:
 
+    # Lectura de la VideoCaptura
+    ret, frame = cap.read()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    # Realizar deteccion
+    detect = model(frame)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    info = detect.pandas().xyxy[0]
+    print(info)
+
+    # Mostrar FPS
+    cv2.imshow('Detector de autos', np.squeeze(detect.render()))
+
+    # Leer teclado
+    t = cv2.waitKey(5)
+    if t == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
